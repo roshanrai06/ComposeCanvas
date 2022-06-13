@@ -14,6 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.composecanvas.ui.BallClicker
 import com.example.composecanvas.ui.CountDownTimer
+import com.example.composecanvas.ui.MyCanvas
 import com.example.composecanvas.ui.theme.ComposeCanvasTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,8 +22,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeCanvasTheme {
-                //  MyCanvas()
-                MainScreen()
+                  MyCanvas()
+                //MainScreen()
             }
         }
     }

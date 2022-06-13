@@ -1,5 +1,6 @@
 package com.example.composecanvas.ui
 
+import android.graphics.Paint
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -10,6 +11,7 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -40,5 +42,12 @@ fun MyCanvas() {
             size = Size(200f, 200f),
             style = Stroke(width = 3.dp.toPx())
         )
+        drawContext.canvas.nativeCanvas.apply {
+            drawText("This is my text", 200f, 200f, Paint().apply {
+                color = android.graphics.Color.RED
+                textSize = 100f
+            })
+        }
     }
+
 }
